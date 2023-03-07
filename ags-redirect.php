@@ -23,8 +23,8 @@ if ( ! defined( 'WPINC' ) ) {
     die;
 }
 
-require plugin_dir_path( __FILE__ ).'/database.php';
-require plugin_dir_path( __FILE__ ).'/settings.php';
+require plugin_dir_path( __FILE__ ).'/includes/database.php';
+require plugin_dir_path( __FILE__ ).'/includes/settings.php';
 
 /**
  * Check if WooCommerce is active

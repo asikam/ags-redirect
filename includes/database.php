@@ -16,7 +16,7 @@ function ags_redir_install() {
 		PRIMARY KEY  (id)
 	) $charset_collate;";
 
-    require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
     dbDelta( $sql );
 
     add_option( 'ags1_db_version', $ags1_db_version );
@@ -26,7 +26,7 @@ function ags_redir_install() {
 function ags_redir_install_data() {
     global $wpdb;
     $name = 'redirect_link';
-    $value = 'wp-admin/admin.php?page=dashboard#';
+    $value = '';
     $table_name = $wpdb->prefix . 'AGs_redirect_settings';
     $wpdb->insert(
         $table_name,
